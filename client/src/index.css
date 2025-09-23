@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(255, 20%, 98%);
+  --foreground: hsl(255, 20%, 10%);
+  --card: hsl(255, 100%, 100%);
+  --card-foreground: hsl(255, 20%, 15%);
+  --popover: hsl(255, 100%, 100%);
+  --popover-foreground: hsl(255, 20%, 10%);
+  --primary: hsl(280, 100%, 70%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(320, 100%, 75%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --muted: hsl(255, 20%, 96%);
+  --muted-foreground: hsl(255, 10%, 45%);
+  --accent: hsl(340, 100%, 80%);
+  --accent-foreground: hsl(0, 0%, 100%);
+  --destructive: hsl(356.3033, 90.5579%, 54.3137%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(255, 20%, 90%);
+  --input: hsl(255, 20%, 96%);
+  --ring: hsl(280, 100%, 70%);
+  --chart-1: hsl(280, 100%, 70%);
+  --chart-2: hsl(320, 100%, 75%);
+  --chart-3: hsl(340, 100%, 80%);
+  --chart-4: hsl(200, 100%, 70%);
+  --chart-5: hsl(60, 100%, 70%);
+  --sidebar: hsl(255, 100%, 100%);
+  --sidebar-foreground: hsl(255, 20%, 15%);
+  --sidebar-primary: hsl(280, 100%, 70%);
+  --sidebar-primary-foreground: hsl(0, 0%, 100%);
+  --sidebar-accent: hsl(340, 100%, 80%);
+  --sidebar-accent-foreground: hsl(0, 0%, 100%);
+  --sidebar-border: hsl(255, 20%, 90%);
+  --sidebar-ring: hsl(280, 100%, 70%);
+  --font-sans: "Inter", sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: Menlo, monospace;
+  --radius: 1rem;
+  --shadow-2xs: 0px 2px 0px 0px hsl(280, 100%, 70% / 0.05);
+  --shadow-xs: 0px 2px 0px 0px hsl(280, 100%, 70% / 0.05);
+  --shadow-sm: 0px 2px 0px 0px hsl(280, 100%, 70% / 0.05), 0px 1px 2px -1px hsl(280, 100%, 70% / 0.05);
+  --shadow: 0px 2px 0px 0px hsl(280, 100%, 70% / 0.05), 0px 1px 2px -1px hsl(280, 100%, 70% / 0.05);
+  --shadow-md: 0px 2px 0px 0px hsl(280, 100%, 70% / 0.05), 0px 2px 4px -1px hsl(280, 100%, 70% / 0.05);
+  --shadow-lg: 0px 2px 0px 0px hsl(280, 100%, 70% / 0.05), 0px 4px 6px -1px hsl(280, 100%, 70% / 0.05);
+  --shadow-xl: 0px 2px 0px 0px hsl(280, 100%, 70% / 0.05), 0px 8px 10px -1px hsl(280, 100%, 70% / 0.05);
+  --shadow-2xl: 0px 2px 0px 0px hsl(280, 100%, 70% / 0.05);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+}
+
+.dark {
+  --background: hsl(255, 20%, 8%);
+  --foreground: hsl(255, 10%, 92%);
+  --card: hsl(255, 20%, 12%);
+  --card-foreground: hsl(255, 10%, 88%);
+  --popover: hsl(255, 20%, 12%);
+  --popover-foreground: hsl(255, 10%, 92%);
+  --primary: hsl(280, 100%, 70%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(320, 100%, 75%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --muted: hsl(255, 20%, 16%);
+  --muted-foreground: hsl(255, 10%, 55%);
+  --accent: hsl(340, 100%, 80%);
+  --accent-foreground: hsl(0, 0%, 100%);
+  --destructive: hsl(356.3033, 90.5579%, 54.3137%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(255, 20%, 20%);
+  --input: hsl(255, 20%, 16%);
+  --ring: hsl(280, 100%, 70%);
+  --chart-1: hsl(280, 100%, 70%);
+  --chart-2: hsl(320, 100%, 75%);
+  --chart-3: hsl(340, 100%, 80%);
+  --chart-4: hsl(200, 100%, 70%);
+  --chart-5: hsl(60, 100%, 70%);
+  --sidebar: hsl(255, 20%, 12%);
+  --sidebar-foreground: hsl(255, 10%, 88%);
+  --sidebar-primary: hsl(280, 100%, 70%);
+  --sidebar-primary-foreground: hsl(0, 0%, 100%);
+  --sidebar-accent: hsl(340, 100%, 80%);
+  --sidebar-accent-foreground: hsl(0, 0%, 100%);
+  --sidebar-border: hsl(255, 20%, 20%);
+  --sidebar-ring: hsl(280, 100%, 70%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .gradient-bg {
+    background: linear-gradient(135deg, hsl(280, 100%, 70%) 0%, hsl(320, 100%, 75%) 50%, hsl(340, 100%, 80%) 100%);
+  }
+  
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(280, 100%, 60%) 0%, hsl(320, 100%, 65%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .hover-lift {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+  }
+  
+  .streak-animation {
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+}
